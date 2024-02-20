@@ -1,0 +1,13 @@
+<div class="container">
+  <img src="{{pokemons.imageUrl}}">
+
+  <h1>{{pokemons.name.toUpperCase()}}</h1>
+
+  <h2>Height: {{pokemons.height}} kg</h2>
+  <h2>Weight: {{pokemons.weight}} cm</h2>
+
+  <h1>Abilities</h1>
+  <div *ngFor="let ability of pokemons.abilities">
+    <h2>{{ability.ability.name.toUpperCase()}}</h2>
+  </div>
+</div>

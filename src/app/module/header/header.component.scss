@@ -1,0 +1,48 @@
+main img {
+  width: 80px;
+  height: 80px;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: aliceblue;
+  font-family: "Roboto", sans-serif;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+  box-shadow: 2px 2px 2px 1px #131313;
+}
+
+.links {
+  display: flex;
+  gap: 40px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.links a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #131313;
+}
+
+.links a:hover {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 375px) {
+  main,
+  .links {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 0 20px;
+  }
+
+  main img{
+    margin: 20px auto;
+  }
+}

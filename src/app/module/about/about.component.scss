@@ -1,0 +1,29 @@
+main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  justify-content: center;
+  align-items: center;
+  margin-top: 160px;
+}
+
+main a,
+main ul li {
+  list-style-type: none;
+  text-decoration: none;
+  color: #000;
+  line-height: 1.4rem;
+}
+
+main ul{
+  padding: 0;
+}
+
+@media screen and (max-width: 375px) {
+  main {
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 10px 10px;
+  }
+}

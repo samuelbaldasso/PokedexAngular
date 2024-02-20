@@ -1,0 +1,27 @@
+<main>
+  <div
+    class="container"
+    *ngFor="
+      let item of pokeList
+        | paginate
+          : {
+              itemsPerPage: limit,
+              currentPage: page,
+              totalItems: pokeList.length
+            }
+    "
+  >
+    <h1>
+      <a [routerLink]="['/pokelist/', item.url.split('/')[6]]">{{
+        item.name.toUpperCase()
+      }}</a>
+    </h1>
+  </div>
+
+  <pagination-controls
+    previousLabel="Previous"
+    nextLabel="Next"
+    [responsive]="true"
+    (pageChange)="page = $event"
+  ></pagination-controls>
+</main>
