@@ -8,8 +8,8 @@ import { Pokemon, PokemonDetails } from '../models/pokemon.model';
 export class PokemonService {
   constructor(private httpClient: HttpClient) { }
 
-  getPokemon(): Observable<Pokemon> {
-    return this.httpClient.get<Pokemon>(`${environment.API_URL}/pokemon?offset=0&limit=1303`);
+  getPokemon(): Observable<Pokemon[]> {
+    return this.httpClient.get<Pokemon[]>(`${environment.API_URL}/pokemon?offset=0&limit=1303`);
   }
 
   getPokemonDetails(pokemonId: number): Observable<PokemonDetails> {

@@ -2,14 +2,12 @@
   <div
     class="container"
     *ngFor="
-      let item of pokeList
-        | paginate
+      let item of pokeList | paginate
           : {
               itemsPerPage: limit,
               currentPage: page,
-              totalItems: pokeList.length
-            }
-    "
+              totalItems: totalItems
+            }; let i = index"
   >
     <h1>
       <a [routerLink]="['/pokelist/', item.url.split('/')[6]]">{{

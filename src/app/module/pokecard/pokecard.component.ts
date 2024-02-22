@@ -1,5 +1,5 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Pokemon, PokemonDetails, ResponsePokemon } from 'src/app/shared/models/pokemon.model';
+import { Component, OnInit } from '@angular/core';
+import { Pokemon } from 'src/app/shared/models/pokemon.model';
 import { PokemonService } from 'src/app/shared/services/pokemon.service';
 
 @Component({
@@ -8,14 +8,15 @@ import { PokemonService } from 'src/app/shared/services/pokemon.service';
   styleUrls: ['./pokecard.component.scss']
 })
 export class PokecardComponent implements OnInit {
-  pokeList: PokemonDetails[] = [];
+  pokeList: Pokemon[] = [];
   page = 1;
   limit = 8;
-  pokeRes: ResponsePokemon[] = [];
+  totalItems: number = 0;
   constructor(private service: PokemonService) { }
 
   ngOnInit(): void {
     this.getAllPokemons();
+    this.totalItems = this.pokeList.length;
   }
 
   getAllPokemons() {
