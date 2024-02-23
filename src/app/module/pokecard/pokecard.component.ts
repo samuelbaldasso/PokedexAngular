@@ -7,21 +7,23 @@ import { PokemonService } from 'src/app/shared/services/pokemon.service';
   templateUrl: './pokecard.component.html',
   styleUrls: ['./pokecard.component.scss']
 })
+
 export class PokecardComponent implements OnInit {
-  pokeList: Pokemon[] = [];
   page = 1;
   limit = 8;
+  pokeList: Pokemon[] = [];
   totalItems: number = 0;
-  constructor(private service: PokemonService) { }
+
+  constructor(private pokemonService: PokemonService) { }
 
   ngOnInit(): void {
-    this.getAllPokemons();
-    this.totalItems = this.pokeList.length;
+    this.pokemonService.getPokemon().subscribe((data: any) => {
+      this.pokeList = data;
+      this.updateTotalItems();
+    });
   }
 
-  getAllPokemons() {
-    this.service.getPokemon().subscribe((data: any) => {
-      this.pokeList = data.results;
-    });
+  updateTotalItems(): void {
+    this.totalItems = this.pokeList.length;
   }
 }
