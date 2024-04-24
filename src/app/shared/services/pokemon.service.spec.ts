@@ -1,10 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 
 import { PokemonService } from './pokemon.service';
-import { HttpClient } from '@angular/common/http';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing'
-import { RouterTestingModule } from '@angular/router/testing';
-import { shareReplay } from 'rxjs';
 import { Pokemon, PokemonDetails } from '../models/pokemon.model';
 import { environment } from 'src/environments/environment';
 

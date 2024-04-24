@@ -1,4 +1,4 @@
-main img {
+.logo img {
   width: 80px;
   height: 80px;
 }
@@ -6,7 +6,7 @@ main img {
 main {
   display: flex;
   justify-content: space-around;
-  padding: 20px;
+  padding: 20px 0;
   background-color: aliceblue;
   font-family: "Roboto", sans-serif;
   position: fixed;
@@ -42,7 +42,12 @@ main {
     padding: 0 0 20px;
   }
 
-  main img{
+  .logo img{
     margin: 20px auto;
+  }
+
+  .logo{
+    display: flex;
+    justify-content: center;
   }
 }
