@@ -1,20 +1,39 @@
-# Angular Pokedex App
+# Angular Pokedex
 
-This is a simple Pokemon application built with Angular 14+. It allows users to search for all pokemons of different types registered on PokeAPI V2.
+Este projeto é uma Pokedex construída usando Angular 2+, consumindo dados da [PokeAPI](https://pokeapi.co). Ela é projetada com uma abordagem mobile-first e inclui testes unitários para garantir a qualidade e a manutenção do código.
 
-## Installation
+## Recursos
 
-1. Clone the repository:
+- **Consumo da PokeAPI**: Obtenha dados detalhados de todos os Pokémons diretamente da PokeAPI.
+- **Design Mobile-First**: Interface otimizada para dispositivos móveis, garantindo boa usabilidade em qualquer dispositivo.
+- **Testes Unitários**: Testes escritos com Jasmine e executados com Karma para garantir que o código funcione como esperado.
+
+## Tecnologias Utilizadas
+
+- **Angular**: Framework utilizado para construir a interface do usuário.
+- **RxJS**: Biblioteca para programação reativa, usada para gerenciar estados e dados assíncronos.
+- **Jasmine e Karma**: Utilizados para escrever e rodar os testes unitários.
+
+## Configuração do Projeto
+
+### Pré-requisitos
+
+Antes de iniciar, você precisa ter instalado:
+- [Node.js](https://nodejs.org/en/)
+- [Angular CLI](https://cli.angular.io/)
+
+### Instalação
+
+Clone o repositório para sua máquina local e siga os comandos seguintes:
 
 ```bash
-git clone https://github.com/samuelbaldasso/angular-pokedex.git
-```
-
-2. Run these next commands:
-
-```bash
+git clone https://github.com/seu-usuario/angular-pokedex.git
+cd angular-pokedex
 npm install
-ng serve
-```
+ng serve --o
 
-Made with ❤️ by Samuel Baldasso
+ng test (para rodar os testes)
+```
+---
+
+Desenvolvido com ❤️ por Samuel Baldasso
