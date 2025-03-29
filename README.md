@@ -27,8 +27,8 @@ Antes de iniciar, você precisa ter instalado:
 Clone o repositório para sua máquina local e siga os comandos seguintes:
 
 ```bash
-git clone https://github.com/samuelbaldasso/Pokedex-TypeScript-Angular-Jasmine-Karma-PokeAPI-RxJS.git
-cd Pokedex-TypeScript-Angular-Jasmine-Karma-PokeAPI-RxJS
+git clone https://github.com/samuelbaldasso/PokedexAngular.git
+cd PokedexAngular
 npm install
 ng serve --o
 
